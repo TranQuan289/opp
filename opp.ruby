@@ -20,12 +20,12 @@ class CongNhan < CanBo
     end
 end
 class KySu < CanBo
-    attr_accessor :majob144144
-    def majob144144(majob144144)
-        @majob144144 = majob144144
+    attr_accessor :majob144
+    def majob144(majob144)
+        @majob144 = majob144
     end    
     def show
-        puts "Tên : #{name144},Tuổi: #{age144}, Giới tính: #{gender144}, Địa chỉ: #{address144}, Ngành: #{majob144144}"
+        puts "Tên : #{name144},Tuổi: #{age144}, Giới tính: #{gender144}, Địa chỉ: #{address144}, Ngành: #{majob144}"
     end
 end
 class NhanVien < CanBo
@@ -52,17 +52,17 @@ when 1
     CongNhan1 = CongNhan.new(name144,age144,gender144,address144)
     CongNhan1.level144(level144)
     list.push(CongNhan1)
-    show()
+    
 when 2
     name144 = gets.to_s
     age144 =  gets.to_i   
     gender144 = gets.to_s    
     address144 = gets.to_s
-    majob144144 = gets.to_i
+    majob144 = gets.to_i
     KySu1 = KySu.new(name144,age144,gender144,address144)
-    KySu1.majob144144(majob144144)
+    KySu1.majob144144(majob114)
     list.push(KySu1)
-    show()
+    
 when 3
     name144 = gets.to_s
     age144 =  gets.to_i   
@@ -74,3 +74,7 @@ when 3
     list.push(NhanVien1)
     return
 end
+list.each_index {
+    |index|
+    p "#{list[index].show()}"
+}
